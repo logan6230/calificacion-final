@@ -6,31 +6,29 @@ calificación se compone de los siguientes porcentajes:
 -> 15% de la calificación de un trabajo final.
  */
 
-function calcular_nota(){
-let nota_1 = parseFloat(document.getElementById('nota_1').value);
-let nota_2 = parseFloat(document.getElementById('nota_2').value);
-let nota_3 = parseFloat(document.getElementById('nota_3').value);
+function calcular_nota() {
+    let nota_1 = parseFloat(document.getElementById('nota_1').value);
+    let nota_2 = parseFloat(document.getElementById('nota_2').value);
+    let nota_3 = parseFloat(document.getElementById('nota_3').value);
 
-let examen_final = parseFloat(document.getElementById('trabajo_final').value);
-let trabajo_final = parseFloat(document.getElementById('examen_final').value);
-let promedio_notas = nota_1 + nota_2 + nota_3
-porcentaje_notas = ((promedio_notas / 3) * 55)/100;
-porcentaje_examen = (examen_final * 30)/100;
-porcentaje_trabajo = (trabajo_final * 15)/100;
-nota_final = porcentaje_notas + porcentaje_examen + porcentaje_trabajo;
+    let examen_final = parseFloat(document.getElementById('trabajo_final').value);
+    let trabajo_final = parseFloat(document.getElementById('examen_final').value);
+    let promedio_notas = nota_1 + nota_2 + nota_3
+    let porcentaje_notas = ((promedio_notas / 3) * 55) / 100;
+    let porcentaje_examen = (examen_final * 30) / 100;
+    let porcentaje_trabajo = (trabajo_final * 15) / 100;
+    let nota_final = porcentaje_notas + porcentaje_examen + porcentaje_trabajo;
 
-// console.log(porcentaje_notas);
-// console.log(porcentaje_examen);
-// console.log(porcentaje_trabajo);
-// console.log(nota_final);
-document.write(`La nota final del alumno es -> ${nota_final}`)
+    let nota = document.getElementById('nota')
+
+    if (nota_final >= 0) {
+        nota.innerHTML = '<p style="color:green;font-size: 20px;">' +'<b>'+ `La nota final del alumno es -> ${nota_final}` + '</p>';
+    } else {
+        nota.innerHTML = '<p style="color:red;">' + "Debe ingresar todos los datos requeridos" + '</p>';
+    }
+
 }
-/**
- * Dos vehículos viajan a diferentes velocidades (v1 y v2) y están distanciados por una distancia d.
-El que está detrás viaja a una velocidad mayor. Se pide hacer un algoritmo para ingresar la
-distancia entre los dos vehículos (km) y sus respectivas velocidades (km/h) y con esto determinar
-y mostrar en qué tiempo (minutos) alcanzará el vehículo más rápido al otro
- */
+
 
 
 

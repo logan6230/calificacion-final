@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
-<form action="">
-    <label">Ingrese la nota 1</label><input type="number" id="nota_1"><br>
-    <label">Ingrese la nota 2</label><input type="number" id="nota_2"><br>
-    <label">Ingrese la nota 3</label><input type="number" id="nota_3"><br>
-    <label">Ingrese la nota del trabajo examen_final</label><input type="number" id="trabajo_final"><br>
-    <label">Ingrese la nota del examen final</label><input type="number" id="examen_final"><br>
-    <input type="button" value="Aceptar" onclick="calcular_nota()">
-</form>
+
+<body class="container">
+
+    <div>
+        <form>
+            <label>Ingrese la nota 1</label><input type="number" id="nota_1"><br>
+            <label>Ingrese la nota 2</label><input type="number" id="nota_2"><br>
+            <label>Ingrese la nota 3</label><input type="number" id="nota_3"><br>
+            <label>Ingrese la nota del trabajo final</label><input type="number" id="trabajo_final"><br>
+            <label>Ingrese la nota del examen final</label><input type="number" id="examen_final"><br>
+            <input type="button" value="Aceptar" onclick="calcular_nota()">
+        </form>
+        <div id="nota">
+
+        </div>
+    </div>
+    <div class="img">
+        <img src="/img/Captura.JPG" alt="imagen-algoritmo">
+    </div>
 
 
     <script src="programa.js"></script>
